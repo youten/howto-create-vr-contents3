@@ -9,9 +9,9 @@
 == バーチャルYouTuberとは
 
 バーチャルYouTuberとは、バーチャル（仮想的な、事実上の）YouTuberのことで、VTuberなどと略されます。
-火付け役であり、"親分"と称されるYouTubeチャンネル登録数トップの「キズナアイ@<fn>{vtuber-kizunaai}」さんが自称したのが用語としての始まりと言えますが、明確な定義があるわけではなく、またその形態は様々であるため、実際にリアルの人間ではない仮装アバターを用いていればおおむね全てバーチャルYouTuberと呼ばれているのが現状です。
+YouTubeのチャンネル登録者数100万人超えのトップランナーであり、"親分"と称される「キズナアイ@<fn>{vtuber-kizunaai}」さんが自称したのが用語としての始まりと言えますが、明確な定義があるわけではなく、またその形態は様々であるため、実際にリアルの人間ではない仮装アバターを用いていればおおむね全てバーチャルYouTuberと呼ばれているのが現状です。
 
-キズナアイさんの最初のYouTube動画投稿は2016/11/29ですが、界隈としては2011/06/13に「First Vlog. Trying this out.」というタイトルでロンドンからのビデオメールを投稿した、Ami Yamatoさんなどが始祖の一人と認識されています。
+キズナアイさんの最初のYouTube動画投稿は2016/11/29ですが、界隈としては2011/06/13に「First Vlog. Trying this out.」というタイトルでロンドンからのビデオメールを投稿した、「Ami Yamato@<fn>{vtuber-amiyamato}」さんなどが始祖であると言われています。
 
 また、YouTubeをメインターゲットとしない「にじさんじ@<fn>{nijisanji}」の方々は「バーチャルライバー」、SHOWROOMでの生放送がメインの「うたっておんぷっコ♪ 東雲めぐ@<fn>{showroom-sinonomemegu}」さんは「バーチャルSHOWROOMER」と名乗られています。
 
@@ -22,7 +22,7 @@
 
 == バーチャルYouTuberを実現するシステムの方式
 
-バーチャルYouTuberを実現するシステムは主な構成要素として、アバターシステムと、そのキャラクターアバターをどのように動かすかというモーションキャプチャシステムの二つから成り立ちます。
+バーチャルYouTuberを実現するシステムは主な構成要素として、キャラクターを表現するアバターシステムと、そのキャラクターアバターをどのように動かすかというモーションキャプチャシステムの二つから成り立ちます。
 
 システムの方式についてはアバターを2D/3Dどちらで実現するかという点で大きく2つに分かれ、その後、いわゆる中の人のモーションをどのようにキャプチャするか、あるいは擬似的に生成するか、その方式によって区分することができます。
 このアバターシステムとモーションキャプチャシステム以外の企画や脚本、音声収録（ボイスチェンジャーを含む）や動画編集については通常のYouTuberと変わりがありませんので、重要な要素ではあるのですが本章では取り扱いません。
@@ -68,14 +68,17 @@ CGWORLDのCraft Eggインタビュー@<fn>{cgworld-craft-egg}が技術的なポ�
 
 ==== Unity, UnrealEngine（ゲームエンジン）
 
-「Unity, UnrealEngine（ゲームエンジン）」という表現が適切ではないとは思いますが、現状、モーションキャプチャや映像・カメラ制御との連携、あるいは外部と通信の上、3Dキャラクターを統括的に扱うことができるプラットフォームとして、ゲームエンジンであるUnityが3Dアバターシステムの主流となっています。
-同等の機能を持つゲームエンジンであるUnreal Engineでももちろん可能ですし、拡張性が限定されるものの、「3Dキャラクターを扱えるレンダリング・動画出力プラットフォーム」として、MayaやBlenderを使うこともできます。
+「Unity, UnrealEngine（ゲームエンジン）」という表現はあまり適切ではないとは思いますが、現状、モーションキャプチャや映像・カメラ制御との連携、あるいは外部システムと連携の上、3Dキャラクターを統括的に扱うことができるプラットフォームとして、ゲームエンジンが3Dアバターシステムの主流となっています。
 
-ただし、「元々（Unreal Engineと比較して）個人デベロッパー向けに広まっている下地がある」「それを下地に、Ouclus RiftやHTC ViveなどのVR HMDの初心者向けの情報が多い」「VRChatのアバター・ワールドのSDKがUnity（5.6.3p1）限定であり、それを前提とした初心者向け情報が現在進行形で増えている」という要素から、未経験者が自由度の高いプラットフォームに手をつけてみたい際には、特にUnityがオススメと言えます。
+「Ouclus RiftやHTC ViveなどのVR HMDに関して、開発初心者向けの情報が多い」「VRChatのアバター・ワールドのSDKがUnity（5.6.3p1）に限定されているため、それを前提とした初心者向け情報が現在進行形で増えている」という要素から、未経験者が自由度の高いプラットフォームに手をつけてみたい際には、Unityがオススメです。
+
+と、書いてはみたものの、CGWORLD 2018年5月号にてんちょーさんによるUEでVTuberする話も掲載されました@<fn>{vtuber-ue}し、お好きな方でチャレンジすれば良いと思います。
+
+//footnote[vtuber-ue][【チュートリアル】Grayちゃんになれる！　UE4×Oculusでカンタンアバター | 特集 | CGWORLD.jp @<href>{https://cgworld.jp/feature/201804-cgw237t1-gray.html}]
 
 ==== MikuMikuDance + MikuMikuCapture, Hitogata, FaceVTuber
 
-VTuberのメインの最終ターゲットは動画なので、3DCGムービー製作プラットフォームであるMikuMikuDance（略称：MMD）はノウハウドキュメントを含めた既存資産が多く、有力なプラットフォームの一つです。
+VTuberのメインの最終ターゲットは動画なので、3DCGムービー製作プラットフォームであるMikuMikuDance（略称：MMD）はノウハウドキュメントを含めた既存資産も多く、有力なプラットフォームの一つです。
 
 2017年末時点では、全身の姿勢を取得することができるセンサデバイスであるKinectを用いた「MikuMikuCapture@<fn>{mikumikucapture}」がほぼ唯一の選択肢でしたが、Kinectはすでに生産終了してしまっているという欠点があります。
 
@@ -90,7 +93,7 @@ VTuberのメインの最終ターゲットは動画なので、3DCGムービー�
 
 「FaceVTuber」はブラウザで完結して独自のモデルの読み込みに対応し、動画の録画と保存を実施することができるアプリです。
 インターフェイスからはわかりづらいですがライブラリを読み込む以外はローカルで動作し、モデル等のアップロードは行いません。
-Three.jsのMMDLoader等の機能を用いていると思われます。
+Three.jsのMMDLoaderあたりの機能を用いていると思われます。
 
 //footnote[mikumikucapture][MikuMikuCapture @<href>{https://sites.google.com/site/mikumikucapture/}]
 //footnote[hitogata][Hitogata @<href>{https://sites.google.com/site/vhitogata/}]
@@ -109,7 +112,7 @@ TrueDepthカメラの機能を利用したアプリをインストールしたiP
 また、「ホロライブ@<fn>{cover-hololive}」は「ときのそら@<fn>{tokinosora}」さんの運営元であるカバー社製のアバターシステムで、既存のARキャラクターアプリをリニューアルする形でリリースされました。
 ホロライブはiPhoneX・iPhoneX以外のiPhone・Androidとプラットフォーム・ハードウェア特性にあわせて部位のトラッキング方式が違うことが特徴です。
 
-元々、@GOROmanさんがFaceRig + Live2Dで実現した@<fn>{goroman-facerig}時点から明らかではあるのですが、本質的には顔の向きとそれっぽい表情の切り替えができればアバターシステムとしての要件は満たしていると言えます。
+元々、GOROmanさんがFaceRig + Live2Dで実現した@<fn>{goroman-facerig}時点から明らかではあるのですが、本質的には顔の向きとそれっぽい表情の切り替えができればアバターシステムとしての要件は満たしていると言えます。
 スマホアプリでライブ配信プラットフォームごとトータルサポートされたアプリが登場するのもそれほど遠くない未来だと思われます。
 
 //footnote[vird-papemoji][パペ文字 | 株式会社 ViRD @<href>{http://vird.co.jp/product/puppemoji/}]
@@ -119,16 +122,12 @@ TrueDepthカメラの機能を利用したアプリをインストールしたiP
 
 ==== バーチャルキャスト
 
-録画や配信は画面キャプチャによる別アプリに頼ることができるため、PC向けのVRヘッドセットを使った単体アバターシステムが配布されだすだろうと思っていました。
-そして、（後述する）AniCastがSHOWROOMと連携しているように、配信プラットフォームとの連携が進んでいくと考えていました。
+「あいえるチャンネル@<fn>{il-channel}」を有するインフィニットループと、遊び要素たっぷりの「バーチャルのじゃロリ狐娘YouTuberおじさんことねこます@<fn>{nojaoji}」さんやにじさんじの「月ノ美兎@<fn>{tsukinomito}」さんのニコ生を実施しているドワンゴという強力タッグによる、VRライブ・コミュニケーションサービス「バーチャルキャスト@<fn>{virtualcast}」がβリリースされました。
+VRキャラクターになりきってインターネット越しに音声を含むコミュニケーションを取ることができます。
 
 //image[virtualcast-01][バーチャルキャスト][scale=0.7]
 
-ところが、一足飛びなことにここへ来て「あいえるチャンネル@<fn>{il-channel}」を有するインフィニットループと、遊び要素たっぷりの「バーチャルのじゃロリ狐娘YouTuberおじさんことねこます@<fn>{nojaoji}」さんやにじさんじの「月ノ美兎@<fn>{tsukinomito}」さんのニコ生を実施しているドワンゴという強力タッグによる@<fn>{aori}、VRライブ・コミュニケーションサービス「バーチャルキャスト@<fn>{virtualcast}」がβリリースされました。
-
-バーチャルキャストはVRキャラクターになりきってインターネット越しに音声を含むコミュニケーションが取れるシステムです。
-
-「みゅみゅ@<fn>{miyumiyu}」さんがニコ生でやっていたVR空間システムがベースになっているとのことですが、色々機能がてんこ盛りな上にオリジナル3Dモデルのインポートにもすぐに対応予定とのことで（超会議のタイミングですかね？）、今後が楽しみなサービスです。
+「みゅみゅ@<fn>{miyumiyu}」さんがニコ生でやっていたVR空間システムがベースになっているとのことですが、色々機能がてんこ盛りな上にVRM形式のオリジナル3Dモデルのインポートにもすぐに対応予定@<fn>{virtualcast-vrm}とのことで、今後が楽しみなサービスです。
 
 //image[virtualcast-02][Trackerの追加で逆立ちも可能][scale=0.7]
 
@@ -137,14 +136,46 @@ TrueDepthカメラの機能を利用したアプリをインストールしたiP
  * 絶妙な広角めのカメラ一体型ミラーが標準配備。他アイテム同様配置を変更できるのであおりも俯瞰も自在ですぐに面白い画を作って試せます。
  * 見栄えもするダイナミックでわかりやすいUI。一人称向けの手元空中コンソールではなくて、外側からもメニュー表示が見えます。
  * ファーストリリースでニコ生コメント連携も対応、他の人のルームに参加する「凸」の対応とその手軽さ。きちんと凸許可設定と他の凸可能な人のリストがあってすぐ凸できるIFがきっちり揃っていてうまいなと思いました。
- * Tracker追加によるトラッキングポイントの増加に対応、キャリブレーション時に自動で認識、最大でTrackerを7つ追加して両肘・両膝・両足・腰の10点トラッキング対応（@<img>{virtualcast-02}）。VRChatのいわゆる「フルトラッキング」勢がまさかの他サービスでも使えるようになるなんて、Tracker品薄が続くこと間違いなしの衝撃です。
+ * Tracker追加によるトラッキングポイントの増加に対応、キャリブレーション時に自動で認識、最大でTrackerを7つ追加して両肘・両膝・両足・腰の10点トラッキング対応（@<img>{virtualcast-02}）。VRChatのいわゆる「フルトラッキング勢」の装備がまさかの他サービスでも使えるようになるなんて、Trackerの品薄が続くこと間違いなしの衝撃です。
 
 //footnote[il-channel][あいえるちゃんねる/株式会社インフィニットループ - YouTube @<href>{https://www.youtube.com/channel/UC_IfjiHP6UnWE0NNog_n_3A}]
 //footnote[nojaoji][けもみみおーこく国営放送 - YouTube @<href>{https://www.youtube.com/channel/UCt8tmsv8kL9Nc1sxvCo9j4Q}]
 //footnote[tsukinomito][月ノ美兎 - YouTube @<href>{https://www.youtube.com/channel/UCD-miitqNY3nyukJ4Fnf4_A}]
 //footnote[virtualcast][バーチャルキャスト[Virtual Cast\] @<href>{https://virtualcast.jp/}]
-//footnote[aori][みゅみゅさん×MIROさんだし、やりたいことの1割とか言ってたし、いくら煽っても予想超えてくるやろ…]
 //footnote[miyumiyu][✿。*みゅみゅちゃんねる♡*。✿-ニコニコミュニティ @<href>{https://com.nicovideo.jp/community/co1774343}]
+//footnote[virtualcast-vrm][「VRM形式の投稿」「バーチャルキャスト連携許可」に対応しました - ニコニ立体お知らせブログ  @<href>{http://blog.nicovideo.jp/3d/2018/04/vrm.html}]
+
+=== VR向け3Dアバター新フォーマットVRM
+
+2018年4月16日、「オリジナルアバターを登録して利用することもできる」とアナウンスされたバーチャルキャストβ版のリリースからわずか3日、ドワンゴ社から「VR向け3Dアバター新フォーマットVRM@<fn>{vrm-home}」が発表されました。
+
+VRMのドキュメントを一通り眺めて、VRMをUnityで扱うための実装・ツールであるUniVRMを触ってみたファーストインプレッションは筆者のBlogに掲載しています@<fn>{vrm-first-impression}のでそちらを参照願います。
+ここでは少し脱線して、筆者が面白いと感じたポイントについて述べさせていただきます。
+
+==== メイン用途のアバターにフォーカスしつつ、別用途にも対応できるライセンス設定UIの思想
+
+まさにVTuberやVRChatのようなメタバースでの利用を想定した、「アバターの人格に関する許諾範囲(Personation / Charaterization Permission)」という項目があることが注目されていますが、Unity上でのその入力UIから思想を感じました。
+
+//image[vrm-license-01][UniVRMによる、VRMメタ情報の入力UI][scale=0.7]
+
+まず、「アバターの人格に関する許諾範囲(Personation / Charaterization Permission)」の設定項目について、まずメイン用途であるアバターとしての利用許可に関する設定が並んだ上で、それ以外に何か規定したい際には「別途サイトを用意してURLを記載してください」、と並んでいます。
+続いて、「再配布・改変に関する許諾範囲(Redistribution / Modifications License)」の設定項目について、「禁止」と「CC0からCCライセンスのバリエーション」が並んだ上で、それ以外に何か規定したい際には、同様に「別途サイトを用意してURLを記載してください」と並んでいます。
+
+あくまでテンプレートとしてCCなどの運用コストの低いライセンスをまず選択式で用意した上で、その他もカバーしているこの並びは良いな、と思いました。
+
+==== glTF 2.0ベースの仕様にMITライセンスで統一されたUniVRMのフルスクラッチ
+
+VRMのフォーマットとは別に、Unity向けの実装実例であるUniVRMは、そのサブモジュールとともに全てMITライセンスで統一されたOSSになっています@<fn>{univrm}。
+
+MITに従う限り、誰もがロイヤリティも用途の制限も無く自由に使うことができ、UniVRMを含めたシステム・ライブラリも問題なくOSSにできます。
+独自拡張をサービスに閉じて実装することもできますし、そしてもちろん「伽藍とバザール」のバザール方式としてVRMそのものの開発に参加することもできます。
+
+仕様と関連ツールがセットでOSSなことは、VRChat SDKの「Final IKとかDynamic Boneとか前提だ、Asset Storeライセンスにつっこむぞつかまれッ！」という大胆な方針@<fn>{vrc-sdk-assets}と比較してとてもクリーンに感じました。
+
+//footnote[vrm-home][VRM - dwango on GitHub @<href>{https://dwango.github.io/vrm/}]
+//footnote[vrm-first-impression][VR向け3Dアバター新フォーマット「VRM」発表、ドキュメントひととおり読んでみた話 - ReDo @<href>{http://greety.sakura.ne.jp/redo/2018/04/vr3dvrm.html}]
+//footnote[univrm][dwango/UniVRM: Unity package that can import and export VRM format @<href>{https://github.com/dwango/UniVRM/}]
+//footnote[vrc-sdk-assets][Supported Script Using Assets @<href>{https://docs.vrchat.com/docs/supported-assets}]
 
 == モーションキャプチャシステム
 
@@ -162,9 +193,9 @@ VRヘッドセットシステムはVR HMDの頭部と、コントローラの両
 
 //image[htc-vive-tracker][HTC Viveでの頭（HMD）・両手（コントローラ）・腰・両足（Tracker）の6点トラッキング][scale=0.85]
 
-また、HTC Viveは「Tracker」という、HMDとコントローラ以外にもトラッキングポイントを追加することができるデバイスが標準で提供されており、主には頭（HMD）・両手（コントローラ）に加え腰・両足などを追加し、Trackerでトラッキングすることにより全身のキャプチャが可能となります。
+また、HTC Viveは「Tracker」という、HMDとコントローラ以外にもトラッキングポイントを追加することができるデバイスが標準で提供されており、主には頭（HMD）・両手（コントローラ）に加え腰・両足などを追加し、Trackerでトラッキングすることにより全身のモーションキャプチャが可能となります。
 
-IKinema社のOrion@<fn>{ikinema-orion}は6〜8箇所のTrackerを含めたViveトラッキングシステムから全身のキャプチャをするシステムで、100FPSオーダのリアルタイムキャプチャの他、fbxへのエクスポートもサポートしています。
+IKinema社のOrion@<fn>{ikinema-orion}は6〜8箇所のTrackerを含めたViveトラッキングシステムから全身のモーションキャプチャをするシステムで、100FPSオーダのリアルタイムキャプチャの他、fbxへのエクスポートもサポートしています。
 
 //footnote[htc-vive][VIVE™ 日本 | 想像を超えたバーチャルリアリティの体験 @<href>{https://www.vive.com/jp/}]
 //footnote[htc-vive-tracker][VIVE™ | VIVE Tracker @<href>{https://www.vive.com/jp/vive-tracker/}]
@@ -174,10 +205,8 @@ IKinema社のOrion@<fn>{ikinema-orion}は6〜8箇所のTrackerを含めたVive�
 
 VRヘッドセットシステムにより、各トラッキングポイントの座標と向きが取得できますが、そこから骨格をIK（Inverse Kinematicsの略、逆運動学）で求めることにより、姿勢を推定することができます。
 
-こちらには、定評のあるIKライブラリである、「Final IK@<fn>{final-ik}」を組み合わせるのが3D Vtuberシステムの一つの定番です。
-筆者も情報の多かったFinal IKベースでVTuberシステムを試してみました@<fn>{redo-how-to-vtuber}が、$90の有料でアセットであり、少々そのノウハウや成果物のOSS化には一手間が必要であり、運用ノウハウは少々閉じて蓄積されている印象です。
-
-また、Unity標準のIK機能@<fn>{unity-ik}もあり、本書の後半ではこちらとXR APIを用いてVTuberシステムを構築した事例をとりあげます。
+定評のあるIKライブラリである、「Final IK@<fn>{final-ik}」を組み合わせるのが3D Vtuberシステムの一つの定番です。
+Unity標準のIK機能@<fn>{unity-ik}もあり、@<chap>{vtuber-dev}ではこちらとXR APIを用いてVTuberシステムを構築した話を紹介します。
 
 //footnote[final-ik][Final IK - Asset Store  @<href>{https://assetstore.unity.com/packages/tools/animation/final-ik-14290?aid=1011lGbg}]
 //footnote[redo-how-to-vtuber][バーチャルYouTuberのやり方 #VTuber - ReDo @<href>{http://greety.sakura.ne.jp/redo/2018/01/how-to-vtuber.html}]
@@ -221,14 +250,14 @@ HTC Viveと比較して「Trackerのような追加トラッキングユニッ�
 
 その他、大規模から小規模まで、ビジネス用途の製品から、研究目的のシステムまで、さまざまなモーションキャプチャが使われています。
 
-設備が大きく少し高額ですが光学式マーカーシステムの自由度が高く、複数人数での利用にも強いOptiTrack@<fn>{optitrack}、生産終了とはなってしまいましたがXBOXプラットフォームでのゲームへの利用・応用事例の豊富な@<fn>{kinect}、Kinectのデバイス・エコシステムの後継として期待されているRealSense@<fn>{realsense}が実際にVTuberに使われているのを確認できます。
+設備が大きく少し高額ですが光学式マーカーシステムの自由度が高く、複数人数での利用にも強いOptiTrack@<fn>{optitrack}、生産終了とはなってしまいましたがXboxプラットフォームでのゲームへの利用・応用事例の豊富なKinect@<fn>{kinect}、Kinectの後継として期待されているRealSense@<fn>{realsense}が実際にVTuberに使われているのを確認できます。
 
-また、現時点の雄であるOpenPose@<fn>{openpose}はライセンスの観点で研究目的の先の応用事例であるVTuberに適用しづらいのですが、機械学習ベースの画像認識ライブラリの進化が進んでおり、キャラクター設定によってはトラッキングの精度の低さが許容できる際など、「WebCamひとつあればいい」という世界はそれなりに広がっていくと考えられます。
+また、現時点で画像ベースのトラッキングライブラリの雄であるOpenPose@<fn>{openpose}はライセンスの観点でVTuberでは利用しづらいのですが、機械学習ベースの画像認識ライブラリそのものの進化は進んでおり、キャラクター設定によってはトラッキングの精度の低さが許容できる際など、「WebCamひとつあればいい」という世界はそれなりに広がっていくと考えられます。
 
-//footnote[optitrack][OptiTrack Japan, Ltd.｜オプティトラック・ジャパン株式会社 @<href>{https://www.optitrack.co.jp/>]
+//footnote[optitrack][OptiTrack Japan, Ltd.｜オプティトラック・ジャパン株式会社 @<href>{https://www.optitrack.co.jp/}]
 //footnote[kinect][Kinect - Windows アプリの開発 @<href>{https://developer.microsoft.com/ja-jp/windows/kinect}]
 //footnote[realsense][Intel® RealSense Technology | Intel® Software @<href>{https://software.intel.com/realsense}]
-//footnote[openpose][CMU-Perceptual-Computing-Lab/openpose: OpenPose: Real-time multi-person keypoint detection library for body, face, and hands estimation @<href>{https://github.com/CMU-Perceptual-Computing-Lab/openpose}]
+//footnote[openpose][OpenPose: Real-time multi-person keypoint detection library for body, face, and hands estimation @<href>{https://github.com/CMU-Perceptual-Computing-Lab/openpose}]
 
 === フェイストラッキング
 
@@ -244,4 +273,4 @@ HTC Viveと比較して「Trackerのような追加トラッキングユニッ�
 ただし、人間らしさの再現としてトラッキングできた眼球運動そのものをキャラクターに反映させることができると、よりリアリティの高い「生きた目」を実現することができるでしょう。
 
 //footnote[tobii-eyetracking-vr][Tobii Pro offers VR integration services @<href>{https://www.tobiipro.com/ja/product-listing/vr-integration/}]
-//footnote[qualcomm-snapdragon845-hmd-dev-kit][Qualcomm Announces Support for Next-Generation VR Experiences With New Snapdragon 845 Virtual Reality Development Kit | Qualcomm  @<href>{https://www.qualcomm.com/news/releases/2018/03/21/qualcomm-announces-support-next-generation-vr-experiences-new-snapdragon}]
+//footnote[qualcomm-snapdragon845-hmd-dev-kit][...Virtual Reality Development Kit  @<href>{https://www.qualcomm.com/news/releases/2018/03/21/qualcomm-announces-support-next-generation-vr-experiences-new-snapdragon}]
