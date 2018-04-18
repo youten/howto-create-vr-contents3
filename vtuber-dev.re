@@ -48,9 +48,7 @@ YVTuberは@chobi_luckさんのXR Mecanim IK Plus@<fn>{xr-mecanimikplus}をベー
 
 //footnote[xr-mecanimikplus][XR Mecanim IK Plus @<href>{http://chobi-glass.com/Unity/XR_MecanimIKPlus.html}]
 
-=== Unity XR API
-
-Unity XR APIは、Unityの標準機能として数多くのVR/AR/MRデバイスを扱えるようにしたAPIです。
+=== Unity XR APIベースであるメリット
 
 XR Mecanim IK Plusをベースにした副産物なのですが、Unity XR APIをベースにしているためSteam VRプラグインが不要であり、Oculus Rift環境でも一応動作します@<fn>{yvtuber-oculus}。
 Steam VR側がOculus RiftやWinMRに対応している互換性については把握していたのですが、Unity標準機能として徐々に整備されてきており、これはこれで十分だなと感じました。
@@ -92,7 +90,10 @@ UnityのAsset Storeで販売されているアセットは、無料・有料を�
 ==== インターネットで配布されているモデルを利用する
 
 「みゅみゅ@<fn>{myumyu}」さんが「ニコニ立体ちゃんことアリシア・ソリッド@<fn>{alicia}」を使っている事例が一番有名だと思いますが、おなじみ「ユニティちゃん@<fn>{unity-chan-web}」や「中野シスターズ@<fn>{nakasis}」など、いくつかライセンスの自由度が高いモデルが無償で配布されています。
+
 配布モデルそれぞれに利用規約がありますので、よく確認の上、遵守しましょう。
+
+改変可能なモデルのテクスチャ色だけを変更するなどの手法は、識別性が良く難易度も低いので便利です。
 
 //footnote[myumyu][みゅ みゅ - YouTube @<href>{https://www.youtube.com/channel/UC_tFMq_yvulj-yzQDqmH9SQ}]
 //footnote[alicia][ニコニ立体ちゃん特設サイト - ニコニ立体 @<href>{http://3d.nicovideo.jp/alicia/}]
