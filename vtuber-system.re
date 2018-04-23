@@ -72,7 +72,7 @@ CGWORLDのCraft Eggインタビュー@<fn>{cgworld-craft-egg}が技術的なポ�
 
 「Ouclus RiftやHTC ViveなどのVR HMDに関して、開発初心者向けの情報が多い」「VRChatのアバター・ワールドのSDKがUnity（5.6.3p1）に限定されているため、それを前提とした初心者向け情報が現在進行形で増えている」という要素から、未経験者が自由度の高いプラットフォームに手をつけてみたい際には、Unityがオススメです。
 
-と、書いてはみたものの、CGWORLD 2018年5月号にてんちょーさんによるUEでVTuberする話も掲載されました@<fn>{vtuber-ue}し、お好きな方でチャレンジすれば良いと思います。
+と、書いてはみたものの、「CGWORLD 2018年5月号」にてんちょーさんによるUEでVTuberする話も掲載されました@<fn>{vtuber-ue}し、お好きな方でチャレンジすれば良いと思います。
 
 //footnote[vtuber-ue][【チュートリアル】Grayちゃんになれる！　UE4×Oculusでカンタンアバター | 特集 | CGWORLD.jp @<href>{https://cgworld.jp/feature/201804-cgw237t1-gray.html}]
 
@@ -127,7 +127,9 @@ VRキャラクターになりきってインターネット越しに音声を含
 
 //image[virtualcast-01][バーチャルキャスト][scale=0.7]
 
-「みゅみゅ@<fn>{miyumiyu}」さんがニコ生でやっていたVR空間システムがベースになっているとのことですが、色々機能がてんこ盛りな上にVRM形式のオリジナル3Dモデルのインポートにもすぐに対応予定@<fn>{virtualcast-vrm}とのことで、今後が楽しみなサービスです。
+「みゅみゅ@<fn>{miyumiyu}」さんがニコ生でやっていたVR空間システムがベースになっているとのことですが、色々たのしい機能がてんこ盛りです。
+さらに2018年4月20日のアップデートにて、VRM形式のアップロードに対応したニコニ立体と連携し@<fn>{virtualcast-vrm}、オリジナルモデルの利用に対応しました@<fn>{virtualcast-original}。
+VRMのアバター利用制限に関する権利設定とniconicoアカウントによる認証にきちんと対応し、モデルを自分だけが使うことと、ほかの人に自由に使ってもらうことの選択が可能です。
 
 //image[virtualcast-02][Trackerの追加で逆立ちも可能][scale=0.7]
 
@@ -144,6 +146,21 @@ VRキャラクターになりきってインターネット越しに音声を含
 //footnote[virtualcast][バーチャルキャスト[Virtual Cast\] @<href>{https://virtualcast.jp/}]
 //footnote[miyumiyu][✿。*みゅみゅちゃんねる♡*。✿-ニコニコミュニティ @<href>{https://com.nicovideo.jp/community/co1774343}]
 //footnote[virtualcast-vrm][「VRM形式の投稿」「バーチャルキャスト連携許可」に対応しました - ニコニ立体お知らせブログ  @<href>{http://blog.nicovideo.jp/3d/2018/04/vrm.html}]
+//footnote[virtualcast-original][なりたいあなたになれる！バーチャルキャストで VRM モデルのインポートが可能に！ | 株式会社インフィニットループ技術ブログ @<href>{https://www.infiniteloop.co.jp/blog/2018/04/virtualcast-matsui/}]
+
+==== カスタムオーダーメイド3D2 バーチャルアバタースタジオ
+
+//image[com3d2-01][カスタムオーダーメイド3D2 バーチャルアバタースタジオ][scale=0.7]
+
+2018年4月19日、KISS社のアダルトゲーム「カスタムオーダーメイド3D2（略称：COM3D2）」が「バーチャルアバタースタジオ」機能に対応するアップデート（無償）が実施されました@<fn>{kiss-com3d2-vas}。
+カスタムメイドシリーズはその名前の通りキャラクターの体型・顔・髪型から服装まで多彩なカスタマイズができることがウリですが、そのカスタマイズしたキャラクターをバーチャルアバターとして操作することができます。
+
+VR空間内でのカメラ操作、ミラー表示、デスクトップの表示に対応し、OBS Studio等のソフトと組み合わせることにより動画の撮影・ライブ放送などに利用が可能です（@<img>{com3d2-01}）。
+
+元々ファン感謝祭でお披露目のあった本システムですが、一般ユーザへの解放は一月と経たず早かったこと、利用規約についてもきちんと記載されており応用についても予め揃えた上でのリリースになっています。
+また、追加Trackerによる腰と両足のトラッキングや、HMDの代わりに頭部Trackerの利用にも対応しており、早くからVRに対応してきたKISS社ならではを感じました。
+
+//footnote[kiss-com3d2-vas][KISS Official Website - バーチャルアバタースタジオ（VTuber）機能の利用規約・利用方法（2018/4/20更新）@<href>{http://kisskiss.tv/kiss/diary.php?no=1030} ※R-18注意]
 
 === VR向け3Dアバター新フォーマットVRM
 
