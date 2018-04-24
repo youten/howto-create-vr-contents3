@@ -87,17 +87,20 @@ VTuberのメインの最終ターゲットは動画なので、3DCGムービー�
 //image[hitogatabeta21][Hitogata beta2.1][scale=0.70]
 
 「Hitogata」はMikuMikuMoving作者のMogg氏によるアバターシステムで、キャラメイク機能が含まれており、単体で素材となる動画を出力できるシステムです。
-また、vmdエクスポート機能があり、「フェイス周りのモーションのみHitogataで生成したものを組み込んでMMD動画をつくる」という使い方もできます。
+vmdエクスポート機能があり、「フェイス周りのモーションのみHitogataで生成したものを組み込んでMMD動画をつくる」という使い方もできます。
+2018年4月22日のbeta2.5アップデートによりVRMの読み込みに対応しました@<fn>{hitogata-25}。
 
 //image[facevtuber][FaceVTuber][scale=0.70]
 
 「FaceVTuber」はブラウザで完結して独自のモデルの読み込みに対応し、動画の録画と保存を実施することができるアプリです。
 インターフェイスからはわかりづらいですがライブラリを読み込む以外はローカルで動作し、モデル等のアップロードは行いません。
-Three.jsのMMDLoaderあたりの機能を用いていると思われます。
+技術スタックとしてはnode.js・parcel・顔認識にclmtrackr・MMDモデルデータの扱いにthree.jsを使っているとのことです@<fn>{facevtuber-stack}。
 
 //footnote[mikumikucapture][MikuMikuCapture @<href>{https://sites.google.com/site/mikumikucapture/}]
 //footnote[hitogata][Hitogata @<href>{https://sites.google.com/site/vhitogata/}]
+//footnote[hitogata-25][Hitogata beta2.5:もぐろぐ @<href>{http://ch.nicovideo.jp/mogg/blomaga/ar1492177}]
 //footnote[facevtuber][FaceVTuber @<href>{https://facevtuber.com/}]
+//footnote[facevtuber-stack][誰でもVTuberになれるWebアプリFaceVTuberの立ち上げ話 @<href>{https://www.slideshare.net/ryokurauchi10/vtuberwebfacevtuber}]
 
 ==== パペ文字, ホロライブ
 
